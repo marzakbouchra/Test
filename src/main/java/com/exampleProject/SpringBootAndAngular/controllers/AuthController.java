@@ -29,7 +29,7 @@ public class AuthController {
         String login = authRequest.getLogin();
         String password = authRequest.getPassword();
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(login, password));
-        final UserDetails userDetails = userDetailsService.loadUserByUsername(login);
+        final UserDetails userDetails = userDetailsService.loadUserByUsername(login); //test
         return ResponseEntity.ok().body(Map.of("token", jwtUtil.generateToken(userDetails), "user", userDetails));
     }
 }
