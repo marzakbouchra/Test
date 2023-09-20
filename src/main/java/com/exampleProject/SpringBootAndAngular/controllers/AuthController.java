@@ -23,7 +23,7 @@ public class AuthController {
     private final JwtUtil jwtUtil;
     private UDService userDetailsService;
 
-
+//add commentaire
     @PostMapping("/authenticate")
     public ResponseEntity<Map<String, Object>> authenticate(@RequestBody AuthRequest authRequest) {
         String login = authRequest.getLogin();
